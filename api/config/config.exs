@@ -9,6 +9,15 @@ use Mix.Config
 config :sling,
   ecto_repos: [Sling.Repo]
 
+
+config :guardian, Guardian,
+  issuer: "Sling",
+  ttl: {30, :days},
+  verify_issuer: true,
+  serializer: Sling.GuardianSerializer
+
+import_config "#{Mix.env}.exs"
+
 # Configures the endpoint
 config :sling, Sling.Endpoint,
   url: [host: "localhost"],
