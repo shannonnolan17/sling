@@ -26,6 +26,9 @@ config :sling, Sling.Endpoint,
   check_origin: false,
   watchers: []
 
+config :guardian, Guardian,
+  secret_key: "Ly5pIPUvcbkE9+n1FTQ3hjJJwAfaa38mvFU31fyyQqx3m0ThXaZEobcSJp9Uhrin"
+
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
